@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DataTable Example</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+    </head>
+    <body>
+        <table id="myTable" class="table table-sm table-bordered table-hover table-striped">
+            <thead class="primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Office</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody class="table-info">
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>RM3,120</td>
+                    <td>Edinburgh</td>
+                    <td>System Architect</td>
+                </tr>
+                <tr>
+                    <td>Garret Winters</td>
+                    <td>RM5,400</td>
+                    <td>Edinburgh</td>
+                    <td>System Developer</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- DataTables JS -->
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "order": [[0, "asc"]],
+                    "paging": true,
+                    "searching": true,
+                    "info": true,
+                });
+            });
+        </script>
+    </body>
+</html>
